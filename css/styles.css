@@ -33,11 +33,9 @@ body {
 
 /* Universal property */
 .container {
-  max-width: 1440px;
-  padding-left: 156px;
-  padding-right: 156px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .section {
@@ -48,11 +46,17 @@ body {
 img {
   display: block;
   max-width: 100%;
-  object-fit: contain;
+}
+
+.visually-hidden {
+  visibility: hidden;
+  pointer-events: none;
+  position: fixed;
+  transform: scale(0);
 }
 
 /* ============== Header Conteiner ============== */
-header {
+.header-main-cont {
   display: flex;
   justify-content: space-between;
   column-gap: 40px;
@@ -64,7 +68,7 @@ header {
 .header-nav-container {
   display: flex;
   align-items: center;
-  column-gap: 76px;
+  /* column-gap: 76px; */
 }
 
 /* Headerr logo design */
@@ -88,6 +92,7 @@ header {
   line-height: 1.17; /* 116.667% */
   letter-spacing: 0.54px;
   text-transform: uppercase;
+  margin-right: 76px;
 }
 
 /* Menue list container */
@@ -166,9 +171,8 @@ address {
 /* ============== Main Conteiner ============== */
 /* Main Section Order Container  */
 .order-section {
-  padding: 188px 472px;
+  padding: 188px 0;
   text-align: center;
-  /* max-width: 100vw; */
   background-color: #2e2f42;
 }
 
@@ -184,7 +188,12 @@ address {
 }
 
 .order-button {
+  display: block;
+  margin: 0 auto;
+  min-width: 169px;
+  height: 56px;
   cursor: pointer;
+  border: none;
   border-radius: 4px;
   background-color: #4d5ae5;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -208,7 +217,7 @@ address {
 
 /* Main Section Order Container  */
 .strategy-title {
-  display: none;
+  /* display: none; */
 }
 
 .strategy-list-container {
@@ -220,10 +229,11 @@ address {
 }
 
 .strategy-list-item {
-  width: calc((100% - 48px) / 4);
+  flex-basis: calc((100% - 72px) / 4);
 }
 
 .strategy-head-title {
+  margin-bottom: 8px;
   /* Header 3 */
   font-size: 20px;
   font-weight: 500;
@@ -253,12 +263,12 @@ address {
   line-height: 1.11; /* 111.111% */
   letter-spacing: 0.72px;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
 
 .team-section-list-container {
   display: flex;
   gap: 24px;
-  margin-top: 72px;
 }
 
 .team-section-list {
@@ -268,7 +278,11 @@ address {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-  width: calc((100% - 48px) / 4);
+  width: calc((100% - 72px) / 4);
+}
+
+.team-section-text-cont {
+  padding-top: 32px;
   padding-bottom: 32px;
 }
 
@@ -280,7 +294,6 @@ address {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.4px;
-  margin-top: 32px;
   margin-bottom: 8px;
 }
 
@@ -294,6 +307,7 @@ address {
 
 /* Our Portfolio Section */
 .portfolio-section-title {
+  margin-bottom: 72px;
   color: #2e2f42;
   text-align: center;
   /* Portfolio Header 2 */
@@ -307,27 +321,30 @@ address {
 .portfolio-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  margin-top: 72px;
+  column-gap: 24px;
+  row-gap: 48px;
 }
 
 .portfolio-section-list {
-  border: 1px solid #e7e9fc;
   background-color: #fff;
   width: calc((100% - 48px) / 3);
   padding-bottom: 32px;
 }
 
+.portfolio-section-text-cont {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
 .portfolio-section-list-title {
-  color: var(--NAVY-BLUE, #2e2f42);
+  color: #2e2f42;
   /* Portfolio Card Header 3 */
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2; /* 120% */
   letter-spacing: 0.4px;
-  margin-top: 32px;
   margin-bottom: 8px;
-  padding-inline: 16px;
 }
 .portfolio-section-list-text {
   /* Portfolio Card Text */
@@ -335,7 +352,6 @@ address {
   font-weight: 400;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.32px;
-  padding-inline: 16px;
 }
 
 /* ============== Footer Conteiner ============== */
@@ -346,6 +362,7 @@ address {
 }
 
 .footer-logo-first-part {
+  display: inline-block;
   color: #4d5ae5;
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
@@ -353,6 +370,7 @@ address {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
 .footer-logo-second-part {
@@ -372,5 +390,4 @@ address {
   line-height: 1.5; /* 150% */
   letter-spacing: 0.32px;
   max-width: 264px;
-  margin-top: 17.5px;
 }
