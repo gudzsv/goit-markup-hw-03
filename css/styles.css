@@ -49,18 +49,25 @@ img {
 }
 
 .visually-hidden {
-  visibility: hidden;
-  pointer-events: none;
-  position: fixed;
-  transform: scale(0);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
 
 /* ============== Header Conteiner ============== */
+.header-root-container {
+  border-bottom: 1px solid #e7e9fc;
+}
+
 .header-main-cont {
   display: flex;
   justify-content: space-between;
   column-gap: 40px;
-  border-bottom: 1px solid #e7e9fc;
   background-color: #fff;
 }
 
@@ -82,6 +89,7 @@ img {
   text-transform: uppercase;
   display: block;
   padding-block: 25.5px;
+  margin-right: 76px;
 }
 
 .header-logo-second-part {
@@ -92,7 +100,6 @@ img {
   line-height: 1.17; /* 116.667% */
   letter-spacing: 0.54px;
   text-transform: uppercase;
-  margin-right: 76px;
 }
 
 /* Menue list container */
@@ -123,7 +130,7 @@ img {
 .header-nav-list-item-link:active:after {
   content: '';
   position: absolute;
-  bottom: -0.5px;
+  bottom: -1.5px;
   left: 0;
   width: 100%;
   height: 4px;
@@ -213,11 +220,6 @@ address {
 }
 .order-button:focus {
   background-color: #404bbf;
-}
-
-/* Main Section Order Container  */
-.strategy-title {
-  /* display: none; */
 }
 
 .strategy-list-container {
